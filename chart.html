@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" charset="utf-8">
+    <title>study-chart</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="study-chart.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="study-chart.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <!-- タブ -->
+        <ul id="myTab" class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a href="#line" id="line-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="line" aria-selected="true">折れ線グラフ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#pie" id="pie-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="pie" aria-selected="false">円グラフ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#bar" id="bar-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="bar" aria-selected="false">棒グラフ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#radar" id="radar-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="radar" aria-selected="false">レーダーチャート</a>
+            </li>
+        </ul>
+
+        <!-- グラフ表示エリア -->
+        <div id="myTabContent" class="tab-content mt-3">
+            <div id="line" class="tab-pane active" role="tabpanel" aria-labelledby="line-tab">
+                <canvas id="myLineChart"></canvas>
+            </div>
+            <div id="pie" class="tab-pane" role="tabpanel" aria-labelledby="pie-tab">
+                <canvas id="myPieChart"></canvas>
+            </div>
+            <div id="bar" class="tab-pane" role="tabpanel" aria-labelledby="bar-tab">
+                <canvas id="myBarChart"></canvas>
+            </div>
+            <div id="radar" class="tab-pane" role="tabpanel" aria-labelledby="radar-tab">
+                <canvas id="myRadarChart"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
